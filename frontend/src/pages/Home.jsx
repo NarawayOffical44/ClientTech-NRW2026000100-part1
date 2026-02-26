@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight, 
@@ -8,337 +7,315 @@ import {
   Globe, 
   TrendingUp, 
   Users,
+  Building2,
+  BarChart3,
   CheckCircle,
-  ChevronRight
+  Play,
+  ArrowUpRight
 } from "lucide-react";
 import { Button } from "../components/ui/button";
+import NewsTicker from "../components/NewsTicker";
 
 const Home = () => {
-  const features = [
+  const stats = [
+    { value: "500+", label: "Energy Partners", icon: <Users className="w-5 h-5" /> },
+    { value: "99.9%", label: "Platform Uptime", icon: <TrendingUp className="w-5 h-5" /> },
+    { value: "₹50Cr+", label: "Trade Volume", icon: <BarChart3 className="w-5 h-5" /> },
+    { value: "28", label: "States Covered", icon: <Globe className="w-5 h-5" /> },
+  ];
+
+  const services = [
+    {
+      icon: <Zap className="w-8 h-8" />,
+      title: "B2B Energy Trading",
+      description: "Comprehensive marketplace connecting energy buyers with verified vendors across India.",
+    },
     {
       icon: <Brain className="w-8 h-8" />,
-      title: "AI-Powered Trading",
-      description: "Advanced algorithms optimize your energy bids with intelligent ranking and gap analysis.",
+      title: "AI-Powered Analytics",
+      description: "Intelligent bid ranking and gap analysis for optimal energy procurement decisions.",
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Vendor Verification",
+      description: "Rigorous compliance checks including regulatory documents and green certifications.",
     },
     {
       icon: <Globe className="w-8 h-8" />,
       title: "Real-Time Grid",
-      description: "5G/6G enabled architecture for instantaneous grid balancing and energy distribution.",
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Verified Vendors",
-      description: "Comprehensive verification system ensuring regulatory compliance and certifications.",
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Smart Analytics",
-      description: "Detailed insights and platform analytics to drive informed energy decisions.",
+      description: "5G/6G enabled infrastructure for instantaneous grid balancing operations.",
     },
   ];
-
-  const stats = [
-    { value: "500+", label: "Energy Partners" },
-    { value: "99.9%", label: "Uptime" },
-    { value: "₹50Cr+", label: "Transactions" },
-    { value: "24/7", label: "Support" },
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15 }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-  };
 
   return (
     <main data-testid="home-page">
+      {/* News Ticker */}
+      <div className="pt-16 lg:pt-20">
+        <NewsTicker />
+      </div>
+
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-950 via-teal-900 to-slate-900" />
+      <section className="relative bg-slate-900 overflow-hidden">
+        {/* Background Image */}
         <div 
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: `url('https://images.pexels.com/photos/9229394/pexels-photo-9229394.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1768839722571-c45c96186dee?crop=entropy&cs=srgb&fm=jpg&q=85&w=1920')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
-        <div className="absolute inset-0 noise-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/95 to-slate-900/80" />
         
-        {/* Decorative Elements */}
-        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-emerald-500/20 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-lime-400/10 rounded-full blur-[100px]" />
-
-        <div className="relative max-w-7xl mx-auto px-6 md:px-12 py-32 md:py-40">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={containerVariants}
-            className="grid lg:grid-cols-2 gap-16 items-center"
-          >
+        <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-20 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Text Content */}
             <div>
-              <motion.div variants={itemVariants} className="mb-6">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-lime-400 text-sm font-medium">
-                  <Zap className="w-4 h-4" />
-                  B2B Energy Trading Platform
-                </span>
-              </motion.div>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wide mb-6">
+                <Zap className="w-3.5 h-3.5" />
+                India's B2B Energy Exchange
+              </div>
               
-              <motion.h1 
-                variants={itemVariants}
-                className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-8"
-              >
-                Powering
-                <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-lime-400">
-                  Tomorrow's Energy
-                </span>
-              </motion.h1>
+              <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
+                Empowering
+                <span className="block text-emerald-400">Energy Markets</span>
+              </h1>
               
-              <motion.p 
-                variants={itemVariants}
-                className="text-xl text-emerald-100/70 leading-relaxed mb-10 max-w-lg"
-              >
-                India's premier B2B marketplace for energy trading. Connect with verified vendors, leverage AI-driven insights, and trade smarter.
-              </motion.p>
+              <p className="text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
+                India's premier B2B marketplace for energy trading. Connect with verified vendors, leverage AI-driven insights, and trade with transparency and efficiency.
+              </p>
               
-              <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4">
                 <Link to="/services">
                   <Button
                     data-testid="hero-cta-primary"
-                    size="lg"
-                    className="rounded-full px-8 py-6 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold text-lg shadow-lg shadow-emerald-500/25 hover:shadow-xl hover:scale-105 transition-all duration-300 btn-shine"
+                    className="rounded-sm px-8 py-6 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold uppercase tracking-wide text-sm"
                   >
                     Explore Platform
-                    <ArrowRight className="ml-2 w-5 h-5" />
+                    <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
-                <Link to="/contact">
+                <Link to="/about">
                   <Button
                     data-testid="hero-cta-secondary"
-                    size="lg"
                     variant="outline"
-                    className="rounded-full px-8 py-6 bg-transparent border-2 border-white/30 text-white hover:bg-white/10 font-semibold text-lg"
+                    className="rounded-sm px-8 py-6 bg-transparent border-2 border-slate-600 text-white hover:bg-slate-800 font-semibold uppercase tracking-wide text-sm"
                   >
-                    Contact Us
+                    Learn More
                   </Button>
                 </Link>
-              </motion.div>
+              </div>
             </div>
 
             {/* Stats Card */}
-            <motion.div 
-              variants={itemVariants}
-              className="hidden lg:block"
-            >
-              <div className="relative p-10 rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10">
-                <div className="grid grid-cols-2 gap-8">
+            <div className="hidden lg:block">
+              <div className="bg-white/5 backdrop-blur border border-white/10 rounded-sm p-8">
+                <h3 className="text-white font-semibold text-sm uppercase tracking-wide mb-6">Platform Highlights</h3>
+                <div className="grid grid-cols-2 gap-6">
                   {stats.map((stat, index) => (
-                    <div key={index} className="text-center">
-                      <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
-                      <div className="text-emerald-200/60 text-sm">{stat.label}</div>
+                    <div key={index} className="text-center p-4 rounded bg-white/5">
+                      <div className="flex justify-center mb-2 text-emerald-400">{stat.icon}</div>
+                      <div className="text-3xl font-bold text-white stat-number">{stat.value}</div>
+                      <div className="text-slate-400 text-sm mt-1">{stat.label}</div>
                     </div>
                   ))}
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
-        >
-          <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2">
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-              className="w-1.5 h-1.5 rounded-full bg-white"
-            />
+            </div>
           </div>
-        </motion.div>
-      </section>
-
-      {/* Features Section */}
-      <section data-testid="features-section" className="py-24 md:py-32 bg-slate-50 grid-pattern">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16 md:mb-20"
-          >
-            <span className="text-emerald-600 font-semibold text-sm uppercase tracking-widest mb-4 block">
-              Why Choose Us
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-emerald-950 tracking-tight">
-              Intelligent Energy Solutions
-            </h2>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={containerVariants}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-          >
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                data-testid={`feature-card-${index}`}
-                className="group relative overflow-hidden rounded-3xl border border-emerald-100 bg-white p-8 hover:border-emerald-300 hover:shadow-2xl transition-all duration-500"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-50 to-lime-50 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-emerald-950 mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </div>
       </section>
 
-      {/* About Preview Section */}
-      <section data-testid="about-preview-section" className="py-24 md:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="text-emerald-600 font-semibold text-sm uppercase tracking-widest mb-4 block">
+      {/* Stats Bar - Mobile */}
+      <section className="lg:hidden bg-slate-800 py-8">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 gap-4">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-2xl font-bold text-white stat-number">{stat.value}</div>
+                <div className="text-slate-400 text-xs mt-1">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section data-testid="services-section" className="py-20 lg:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="text-center mb-16">
+            <span className="text-emerald-600 font-semibold text-xs uppercase tracking-widest mb-3 block">
+              Our Services
+            </span>
+            <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
+              Comprehensive Energy Solutions
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                data-testid={`service-card-${index}`}
+                className="bg-white border border-slate-200 rounded-sm p-6 card-lift border-accent-top"
+              >
+                <div className="w-14 h-14 rounded bg-slate-100 flex items-center justify-center text-emerald-600 mb-5">
+                  {service.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/services">
+              <Button
+                data-testid="view-all-services"
+                variant="outline"
+                className="rounded-sm px-8 py-5 border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white font-semibold uppercase tracking-wide text-sm"
+              >
+                View All Services
+                <ArrowUpRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* About Preview */}
+      <section data-testid="about-preview" className="py-20 lg:py-28 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <span className="text-emerald-600 font-semibold text-xs uppercase tracking-widest mb-3 block">
                 About Renergizr
               </span>
-              <h2 className="text-3xl md:text-5xl font-bold text-emerald-950 tracking-tight mb-6">
-                Revolutionizing Energy Trade in India
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-6">
+                Transforming Energy Trade in India
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                Renergizr Industries Private Limited is at the forefront of India's energy transformation. Our B2B marketplace connects energy producers with buyers through intelligent, AI-powered solutions that ensure transparency, efficiency, and sustainability.
+              <p className="text-slate-600 leading-relaxed mb-6">
+                Renergizr Industries Private Limited is at the forefront of India's energy transformation. Our B2B marketplace leverages cutting-edge AI technology to match energy buyers with verified vendors.
               </p>
-              <ul className="space-y-4 mb-10">
+              <ul className="space-y-3 mb-8">
                 {[
-                  "RFQ/Tendering workflow for streamlined procurement",
-                  "AI-driven bid ranking for optimal deals",
-                  "Green energy certification verification",
-                  "Real-time grid balancing with 5G/6G tech"
+                  "AI-driven bid ranking and gap analysis",
+                  "Comprehensive vendor verification system",
+                  "Real-time grid balancing with 5G/6G",
+                  "Green energy certification support"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-emerald-500 shrink-0 mt-0.5" />
-                    <span className="text-slate-700">{item}</span>
+                    <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
+                    <span className="text-slate-700 text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
               <Link to="/about">
                 <Button
-                  data-testid="learn-more-btn"
-                  variant="outline"
-                  className="rounded-full px-8 py-6 border-2 border-emerald-950 text-emerald-950 hover:bg-emerald-950 hover:text-white font-semibold transition-all duration-300 group"
+                  data-testid="learn-more-about"
+                  className="rounded-sm px-8 py-5 bg-slate-900 hover:bg-slate-800 text-white font-semibold uppercase tracking-wide text-sm"
                 >
-                  Learn More About Us
-                  <ChevronRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  Learn More
+                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="absolute -inset-4 bg-gradient-to-br from-emerald-200 to-lime-200 rounded-3xl blur-2xl opacity-40" />
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative">
+              <div className="rounded-sm overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1766802981801-4b4a9a1d8f1c?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
-                  alt="Energy Trading Platform"
-                  className="w-full h-[500px] object-cover"
+                  src="https://images.unsplash.com/photo-1686475577092-285cd688e55a?crop=entropy&cs=srgb&fm=jpg&q=85&w=800"
+                  alt="Renewable Energy"
+                  className="w-full h-[400px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/60 to-transparent" />
-                <div className="absolute bottom-8 left-8 right-8">
-                  <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center">
-                        <Users className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <div className="font-semibold text-emerald-950">Contact Person</div>
-                        <div className="text-slate-600">Himanshu Gupta</div>
-                      </div>
-                    </div>
+              </div>
+              {/* Floating Card */}
+              <div className="absolute -bottom-6 -left-6 bg-white shadow-lg rounded-sm p-5 max-w-[220px]">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded bg-emerald-500 flex items-center justify-center">
+                    <Building2 className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-slate-900 text-lg">16+</div>
+                    <div className="text-slate-500 text-xs">Years of Industry Experience</div>
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Chairman Message */}
+      <section data-testid="chairman-message" className="py-20 lg:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-4">
+              <div className="relative">
+                <div className="rounded-sm overflow-hidden bg-slate-200">
+                  <div className="w-full h-[350px] bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
+                    <div className="w-32 h-32 rounded-full bg-emerald-500 flex items-center justify-center">
+                      <Users className="w-16 h-16 text-white" />
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute -bottom-4 left-4 right-4 bg-slate-900 text-white p-4 rounded-sm">
+                  <div className="font-bold">Himanshu Gupta</div>
+                  <div className="text-emerald-400 text-sm">Founder & Director</div>
+                </div>
+              </div>
+            </div>
+            <div className="lg:col-span-8">
+              <span className="text-emerald-600 font-semibold text-xs uppercase tracking-widest mb-3 block">
+                From the Founder
+              </span>
+              <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-6">
+                Leadership Message
+              </h2>
+              <blockquote className="border-l-4 border-emerald-500 pl-6 italic text-slate-600 text-lg leading-relaxed mb-6">
+                "At Renergizr, we are committed to transforming India's energy landscape. Our B2B marketplace leverages AI and advanced technology to bring transparency, efficiency, and sustainability to energy trading. We believe in empowering businesses to make smarter energy decisions for a greener future."
+              </blockquote>
+              <p className="text-slate-500 text-sm">
+                Himanshu Gupta has been instrumental in building Renergizr's vision of democratizing energy trading in India through innovative technology solutions.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section data-testid="cta-section" className="py-24 md:py-32 bg-emerald-950 relative overflow-hidden">
-        <div className="absolute inset-0 noise-overlay" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-500/20 rounded-full blur-[150px]" />
-        
-        <div className="relative max-w-4xl mx-auto px-6 md:px-12 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-6">
-              Ready to Transform Your Energy Trading?
-            </h2>
-            <p className="text-xl text-emerald-100/70 mb-10 max-w-2xl mx-auto">
-              Join India's leading B2B energy marketplace and experience the future of intelligent energy procurement.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/contact">
-                <Button
-                  data-testid="cta-primary"
-                  size="lg"
-                  className="rounded-full px-10 py-7 bg-lime-400 hover:bg-lime-300 text-emerald-950 font-bold text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
-                >
-                  Start Trading Today
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-              <Link to="/services">
-                <Button
-                  data-testid="cta-secondary"
-                  size="lg"
-                  variant="outline"
-                  className="rounded-full px-10 py-7 bg-transparent border-2 border-white/30 text-white hover:bg-white/10 font-semibold text-lg"
-                >
-                  View Services
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
+      <section data-testid="cta-section" className="py-20 lg:py-24 bg-slate-900">
+        <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
+          <h2 className="text-3xl lg:text-4xl font-bold text-white tracking-tight mb-6">
+            Ready to Transform Your Energy Trading?
+          </h2>
+          <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
+            Join India's leading B2B energy marketplace and experience efficient, transparent, and sustainable energy procurement.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/contact">
+              <Button
+                data-testid="cta-primary"
+                className="rounded-sm px-10 py-6 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold uppercase tracking-wide text-sm"
+              >
+                Get Started Today
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </Link>
+            <Link to="/services">
+              <Button
+                data-testid="cta-secondary"
+                variant="outline"
+                className="rounded-sm px-10 py-6 bg-transparent border-2 border-slate-600 text-white hover:bg-slate-800 font-semibold uppercase tracking-wide text-sm"
+              >
+                View Services
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
     </main>
