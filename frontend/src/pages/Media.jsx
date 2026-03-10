@@ -16,6 +16,9 @@ import {
 import { Button } from "../components/ui/button";
 
 const Media = () => {
+  // LinkedIn live feed is embedded via iframe - no hardcoded posts needed
+  // Feed automatically updates with all company page posts
+
   const blogPosts = [
     {
       title: "Geothermal Energy: The Future of Baseload Renewable Power",
@@ -181,7 +184,7 @@ const Media = () => {
         </div>
       </section>
 
-      {/* LinkedIn Feed Section */}
+      {/* LinkedIn Live Feed Section */}
       <section data-testid="linkedin-section" className="py-20 lg:py-28 bg-slate-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12">
@@ -194,87 +197,90 @@ const Media = () => {
                   Social Updates
                 </span>
                 <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
-                  LinkedIn Posts
+                  LinkedIn Feed
                 </h2>
               </div>
             </div>
             <a
-              href="https://linkedin.com/company/renergizr-industries"
+              href="https://www.linkedin.com/company/renergizr-industries"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="view-linkedin"
               className="inline-flex items-center gap-2 px-6 py-3 bg-[#0077B5] text-white text-sm font-semibold rounded-sm hover:bg-[#006097] transition-colors mt-4 md:mt-0"
             >
               <Linkedin className="w-4 h-4" />
-              Follow on LinkedIn
+              Visit LinkedIn
               <ExternalLink className="w-3 h-3" />
             </a>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {linkedinPosts.map((post) => (
+          {/* LinkedIn Company Feed Embed - Live Updates */}
+          <div className="bg-white border border-slate-200 rounded-sm overflow-hidden">
+            <div className="aspect-video w-full flex items-center justify-center bg-gradient-to-br from-[#0077B5] to-[#004182]">
+              <iframe
+                src="https://www.linkedin.com/embed/feed/update/urn:li:organization:renergizr-industries"
+                height="800"
+                width="100%"
+                frameBorder="0"
+                allowFullScreen={true}
+                allow="autoplay clipboard-write encrypted-media picture-in-picture web-share"
+                title="Renergizr Industries LinkedIn Company Feed"
+                className="w-full"
+                style={{minHeight: "800px", border: "none"}}
+              ></iframe>
+            </div>
+          </div>
+
+          <div className="mt-8 p-6 bg-emerald-50 border border-emerald-200 rounded-sm">
+            <p className="text-sm text-emerald-900">
+              <strong>Live LinkedIn Feed:</strong> This feed automatically updates with all posts from Renergizr Industries LinkedIn company page. New posts will appear here instantly when published. To view more posts or follow us, visit our LinkedIn profile.
+            </p>
+          </div>
+
+          {/* Direct LinkedIn Links as Backup */}
+          <div className="mt-12 border-t border-slate-200 pt-12">
+            <h3 className="text-xl font-bold text-slate-900 mb-6">Quick Links to LinkedIn Posts</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               <a
-                key={post.id}
-                href={post.linkedinUrl}
+                href="https://www.linkedin.com/company/renergizr-industries"
                 target="_blank"
                 rel="noopener noreferrer"
-                data-testid={`linkedin-post-${post.id}`}
-                className="bg-white border border-slate-200 rounded-sm overflow-hidden card-lift hover:shadow-lg transition-all group"
+                className="flex items-center gap-3 p-4 bg-white border border-slate-200 rounded-sm hover:shadow-md hover:border-[#0077B5] transition-all group"
               >
-                {/* Image with LinkedIn Logo Overlay */}
-                <div className="aspect-video overflow-hidden bg-gradient-to-br from-[#0077B5] to-[#004182] flex items-center justify-center relative">
-                  {post.image ? (
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                    />
-                  ) : (
-                    <Linkedin className="w-16 h-16 text-white opacity-50" />
-                  )}
-                  <div className="absolute top-3 right-3 w-10 h-10 bg-white rounded-sm flex items-center justify-center shadow-md">
-                    <Linkedin className="w-5 h-5 text-[#0077B5]" />
-                  </div>
+                <Linkedin className="w-5 h-5 text-[#0077B5] shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold text-slate-900 group-hover:text-[#0077B5] transition-colors">Company Page</p>
+                  <p className="text-xs text-slate-500 truncate">Visit our profile</p>
                 </div>
-
-                {/* Card Content */}
-                <div className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className="text-xs font-semibold text-emerald-600 uppercase tracking-wide">
-                      {post.category}
-                    </span>
-                    <span className="text-slate-400">•</span>
-                    <span className="text-xs text-slate-500">{post.date}</span>
-                  </div>
-
-                  <h3 className="text-sm font-bold text-slate-900 mb-2 line-clamp-2 group-hover:text-emerald-600 transition-colors">
-                    {post.title}
-                  </h3>
-
-                  <p className="text-slate-600 text-xs leading-relaxed line-clamp-2 mb-4">
-                    {post.excerpt}
-                  </p>
-
-                  {/* Engagement Metrics */}
-                  <div className="border-t border-slate-100 pt-3 flex items-center justify-between text-slate-500 text-xs">
-                    <div className="flex items-center gap-3">
-                      <button className="flex items-center gap-1 hover:text-[#0077B5] transition-colors">
-                        <Heart className="w-3.5 h-3.5" />
-                        <span>{post.engagement.likes}</span>
-                      </button>
-                      <button className="flex items-center gap-1 hover:text-[#0077B5] transition-colors">
-                        <MessageCircle className="w-3.5 h-3.5" />
-                        <span>{post.engagement.comments}</span>
-                      </button>
-                    </div>
-                    <button className="flex items-center gap-1 hover:text-[#0077B5] transition-colors">
-                      <Share2 className="w-3.5 h-3.5" />
-                      <span>{post.engagement.shares}</span>
-                    </button>
-                  </div>
-                </div>
+                <ExternalLink className="w-4 h-4 text-slate-400 shrink-0" />
               </a>
-            ))}
+              <a
+                href="https://www.linkedin.com/company/renergizr-industries/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-white border border-slate-200 rounded-sm hover:shadow-md hover:border-[#0077B5] transition-all group"
+              >
+                <Linkedin className="w-5 h-5 text-[#0077B5] shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold text-slate-900 group-hover:text-[#0077B5] transition-colors">All Posts</p>
+                  <p className="text-xs text-slate-500 truncate">View complete feed</p>
+                </div>
+                <ExternalLink className="w-4 h-4 text-slate-400 shrink-0" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/renergizr-industries/about/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-white border border-slate-200 rounded-sm hover:shadow-md hover:border-[#0077B5] transition-all group"
+              >
+                <Linkedin className="w-5 h-5 text-[#0077B5] shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm font-semibold text-slate-900 group-hover:text-[#0077B5] transition-colors">About</p>
+                  <p className="text-xs text-slate-500 truncate">Company information</p>
+                </div>
+                <ExternalLink className="w-4 h-4 text-slate-400 shrink-0" />
+              </a>
+            </div>
           </div>
 
           {/* Press Releases Section */}
