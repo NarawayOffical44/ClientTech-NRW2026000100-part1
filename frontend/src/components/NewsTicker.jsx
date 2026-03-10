@@ -3,11 +3,11 @@ import { Zap, TrendingUp, Bell } from "lucide-react";
 
 const NewsTicker = () => {
   const newsItems = [
-    "Renergizr Industries launches B2B Energy Trading Platform",
-    "AI-Powered Bid Ranking System now operational",
-    "5G/6G Grid Balancing integration in progress",
-    "New partnerships announced for sustainable energy trading",
-    "RFQ & Tendering module successfully deployed",
+    "20 kW geothermal pilot successfully deployed in Telangana",
+    "Patented geothermal electricity generation process secured",
+    "Clean Energy Genset System achieves 80% cost reduction vs diesel",
+    "Supported by Ministry of New and Renewable Energy",
+    "Zero-emission technology validated through field deployments",
   ];
 
   return (

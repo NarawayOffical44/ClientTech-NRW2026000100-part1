@@ -18,50 +18,50 @@ const About = () => {
     {
       icon: <Target className="w-6 h-6" />,
       title: "Mission",
-      description: "To democratize energy trading in India through an intelligent, transparent, and sustainable B2B marketplace that empowers businesses to make smarter energy decisions.",
+      description: "Develop indigenous clean energy technologies that deliver zero-emission electricity using geothermal energy and green hydrogen, replacing diesel generators and enabling India's decarbonization at scale.",
     },
     {
       icon: <Eye className="w-6 h-6" />,
       title: "Vision",
-      description: "To become India's most trusted energy trading platform, driving the nation's transition to a sustainable energy future through technology and innovation.",
+      description: "Build a clean, resilient, and energy-secure future through localized renewable energy production. Transform how industries, ports, and defense infrastructure generate power globally.",
     },
     {
       icon: <Award className="w-6 h-6" />,
       title: "Values",
-      description: "Transparency, sustainability, innovation, and trust form the cornerstone of everything we do. We create value for all stakeholders in the energy ecosystem.",
+      description: "Innovation, sustainability, reliability, and indigenous technology form our core values. We create measurable environmental and economic impact for all stakeholders.",
     },
   ];
 
   const timeline = [
-    { 
-      year: "2024", 
-      title: "Company Founded", 
-      description: "Renergizr Industries Private Limited established with a vision to transform B2B energy trading in India." 
+    {
+      year: "2023",
+      title: "5 kW Prototype Demonstration",
+      description: "Successfully developed and demonstrated a 5 kW prototype system in Delhi with research institutions and government partners."
     },
-    { 
-      year: "2025", 
-      title: "Platform Development", 
-      description: "Strategic partnership initiated for developing the AI-powered B2B energy marketplace platform." 
+    {
+      year: "2024",
+      title: "Patented Technology",
+      description: "Secured patent from Government of India Patent Office for geothermal electricity generation process."
     },
-    { 
-      year: "2026", 
-      title: "MVP Launch", 
-      description: "Launch of the intelligent energy trading platform with RFQ/Tendering and AI bid ranking capabilities." 
+    {
+      year: "2024",
+      title: "20 kW Field Pilot",
+      description: "Deployed 20 kW pilot system at a geothermal site in Telangana, validating technology under real operating conditions."
     },
-    { 
-      year: "Future", 
-      title: "Market Expansion", 
-      description: "Scaling operations across India with advanced features, partnerships, and sustainable energy solutions." 
+    {
+      year: "2026+",
+      title: "Commercial Scaling",
+      description: "Scaling deployments to multi-megawatt systems across industrial clusters, ports, and defense infrastructure."
     },
   ];
 
   const highlights = [
-    "RFQ/Tendering workflow for streamlined procurement",
-    "AI-driven bid ranking for optimal deals",
-    "Green energy certification verification",
-    "Real-time grid balancing with 5G/6G tech",
-    "Comprehensive vendor verification system",
-    "Platform analytics and insights dashboard"
+    "Zero carbon emissions from electricity generation",
+    "80% lower operational costs than diesel generators",
+    "Modular systems from 5 kW to 1 MW+ capacity",
+    "Patented geothermal energy technology",
+    "Advanced green hydrogen production (99.8% purity)",
+    "Low-noise operation below 45 decibels"
   ];
 
   return (
@@ -76,11 +76,11 @@ const About = () => {
             </div>
             
             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
-              Building India's Energy Future
+              Decarbonizing Energy with Indigenous Innovation
             </h1>
-            
+
             <p className="text-lg text-slate-400 leading-relaxed">
-              Renergizr Industries Private Limited is pioneering the next generation of B2B energy trading with AI-powered solutions, sustainable practices, and a commitment to transparency.
+              Renergizr Industries is a deep-tech clean energy startup developing patented technologies for zero-emission electricity generation using geothermal energy and green hydrogen.
             </p>
           </div>
         </div>
@@ -95,13 +95,13 @@ const About = () => {
                 Our Story
               </span>
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-6">
-                From Vision to Reality
+                From Research to Reality
               </h2>
               <p className="text-slate-600 leading-relaxed mb-6">
-                Renergizr Industries was founded with a singular purpose: to transform how businesses in India buy and sell energy. We recognized the inefficiencies in traditional energy procurement and set out to create a smarter solution.
+                Founded by Himanshu Gupta and technically mentored by Dr. Bhupesh Sharma, Renergizr Industries combines scientific research with advanced engineering to develop next-generation clean energy systems. Our mission is delivering reliable, affordable, and zero-emission electricity to industries, ports, and defense infrastructure.
               </p>
               <p className="text-slate-600 leading-relaxed mb-8">
-                Our B2B marketplace leverages cutting-edge AI technology to match energy buyers with verified vendors, ensuring optimal pricing, regulatory compliance, and sustainable practices. We're not just building a platform—we're shaping the future of India's energy sector.
+                Through patented geothermal technology and advanced hydrogen fuel cells, we're replacing diesel generators with sustainable solutions that reduce costs by 80% while eliminating carbon emissions. Our validated prototypes and field pilots prove we're delivering the future today.
               </p>
               <div className="flex items-center gap-4 p-5 rounded bg-slate-50 border-accent-left">
                 <div className="w-12 h-12 rounded bg-emerald-500 flex items-center justify-center shrink-0">
@@ -170,10 +170,10 @@ const About = () => {
                 What We Offer
               </span>
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-6">
-                Platform Capabilities
+                Technology Features
               </h2>
               <p className="text-slate-600 leading-relaxed mb-8">
-                Our comprehensive platform provides everything you need for efficient energy trading, from intelligent bid matching to regulatory compliance.
+                Our clean energy systems combine advanced electrolysis, geothermal extraction, and fuel cell technology to deliver reliable, scalable power for multiple applications.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {highlights.map((item, index) => (
@@ -185,13 +185,13 @@ const About = () => {
               </div>
             </div>
             <div className="bg-slate-900 p-8 lg:p-10 rounded-sm">
-              <h3 className="text-white font-bold text-lg mb-6">Key Differentiators</h3>
+              <h3 className="text-white font-bold text-lg mb-6">Core Technology</h3>
               <div className="space-y-4">
                 {[
-                  { label: "AI-Powered Intelligence", value: "Smart bid ranking & analysis" },
-                  { label: "Regulatory Compliance", value: "Built-in compliance frameworks" },
-                  { label: "Real-Time Operations", value: "5G/6G enabled grid balancing" },
-                  { label: "Green Energy Focus", value: "Sustainability certifications" },
+                  { label: "Hydrogen Production", value: "99.8% purity from wastewater" },
+                  { label: "Geothermal Capacity", value: "100+ year operational life" },
+                  { label: "Scalability", value: "5 kW to 1 MW+ modular systems" },
+                  { label: "Cost Efficiency", value: "80% lower than diesel generators" },
                 ].map((item, index) => (
                   <div key={index} className="flex justify-between items-center border-b border-slate-700 pb-4">
                     <span className="text-slate-300 text-sm">{item.label}</span>
@@ -243,10 +243,10 @@ const About = () => {
       <section className="py-20 lg:py-24 bg-slate-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white tracking-tight mb-6">
-            Want to Partner With Us?
+            Ready to Deploy Clean Energy?
           </h2>
           <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
-            Join the energy revolution. Discover how Renergizr can transform your energy trading experience.
+            Partner with Renergizr to implement zero-emission power solutions for your industrial, commercial, or defense operations.
           </p>
           <Link to="/contact">
             <Button

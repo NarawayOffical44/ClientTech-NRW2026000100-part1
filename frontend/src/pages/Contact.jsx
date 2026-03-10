@@ -69,20 +69,20 @@ const Contact = () => {
 
   const faqs = [
     {
-      q: "What is Renergizr's B2B energy trading platform?",
-      a: "Our platform connects energy buyers with verified vendors through an intelligent marketplace featuring AI-powered bid ranking, RFQ/tendering workflows, and real-time grid balancing capabilities."
+      q: "How do Renergizr systems generate electricity without emissions?",
+      a: "Our systems use advanced electrochemistry to produce hydrogen from wastewater through electrolysis, then convert hydrogen into electricity via fuel cells. Geothermal systems tap into Earth's heat for continuous renewable power generation."
     },
     {
-      q: "How does the AI-driven bid ranking work?",
-      a: "Our proprietary algorithm analyzes multiple parameters including price, vendor reliability, compliance status, and energy specifications to rank bids and help you make optimal procurement decisions."
+      q: "What is the typical cost saving compared to diesel generators?",
+      a: "Renergizr systems achieve approximately 80% lower operational costs than diesel generators over their operational lifetime. This includes fuel, maintenance, and environmental compliance costs."
     },
     {
-      q: "Is the platform suitable for small businesses?",
-      a: "Absolutely! Our platform is designed to serve businesses of all sizes, from SMEs to large enterprises, with scalable solutions tailored to your specific energy trading needs."
+      q: "Can these systems be deployed for industrial applications?",
+      a: "Yes, our modular systems range from 5 kW to 1 MW+ capacity, suitable for manufacturing plants, refineries, data centers, hospitals, telecom towers, ports, and defense installations."
     },
     {
-      q: "How do you ensure vendor compliance?",
-      a: "We have a comprehensive verification system that checks regulatory documents, green energy certifications, carbon credit balances, and ongoing compliance monitoring for all registered vendors."
+      q: "What support do you provide after installation?",
+      a: "We provide end-to-end support including commissioning, operator training, AI-enabled remote monitoring, predictive maintenance alerts, and 24/7 technical assistance."
     },
   ];
 

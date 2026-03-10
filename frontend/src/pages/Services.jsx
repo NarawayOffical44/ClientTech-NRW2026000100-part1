@@ -21,79 +21,79 @@ import { Button } from "../components/ui/button";
 const Services = () => {
   const mainServices = [
     {
-      icon: <FileText className="w-8 h-8" />,
-      title: "RFQ & Tendering",
-      description: "Streamlined Request for Quote and tendering workflow that connects energy buyers with qualified vendors efficiently.",
+      icon: <Zap className="w-8 h-8" />,
+      title: "Clean Energy Genset System",
+      description: "Zero-emission electricity generation using green hydrogen fuel cells and wastewater-based electrolysis technology.",
       features: [
-        "Post energy requirements easily",
-        "Receive competitive bids",
-        "Compare offers transparently",
-        "Award contracts seamlessly"
-      ],
-    },
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "AI-Driven Bid Ranking",
-      description: "Our intelligent algorithm analyzes and ranks vendor bids based on multiple parameters to find you the best deals.",
-      features: [
-        "Smart bid analysis",
-        "Price optimization",
-        "Quality scoring",
-        "Gap analysis engine"
-      ],
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Vendor Verification",
-      description: "Comprehensive verification system ensuring all vendors meet regulatory requirements and certifications.",
-      features: [
-        "Regulatory document check",
-        "Green energy certifications",
-        "Carbon credit verification",
-        "Compliance monitoring"
+        "99.8% pure hydrogen production",
+        "High-efficiency fuel cell stacks",
+        "Modular 5 kW to 1 MW+ capacity",
+        "AI-enabled remote monitoring"
       ],
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Real-Time Grid Balancing",
-      description: "5G/6G enabled low-latency architecture for instantaneous grid balancing and energy distribution.",
+      title: "Geothermal Power Systems",
+      description: "Patented indigenous geothermal electricity generation for continuous renewable baseload power with 100+ year lifespan.",
       features: [
-        "Ultra-low latency",
-        "Real-time monitoring",
-        "Dynamic load balancing",
-        "Grid optimization"
+        "Patented geothermal process",
+        "Continuous baseload generation",
+        "Waste heat utilization",
+        "Ultra-reliable power delivery"
+      ],
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Cost Optimization",
+      description: "80% reduction in operational costs compared to diesel generators with minimal maintenance requirements.",
+      features: [
+        "Lower fuel dependency",
+        "Reduced operational expenses",
+        "Minimal maintenance needs",
+        "Predictive monitoring system"
+      ],
+    },
+    {
+      icon: <BadgeCheck className="w-8 h-8" />,
+      title: "Environmental Impact",
+      description: "Zero carbon emissions with measurable environmental benefits and ESG goal achievement.",
+      features: [
+        "600 MT CO2 offset per MW annually",
+        "Improved air quality",
+        "ESG compliance",
+        "Sustainability certifications"
       ],
     },
   ];
 
   const modules = [
     {
-      icon: <Users className="w-6 h-6" />,
-      title: "Client Module",
-      description: "Complete requirement gathering with filters for energy specifications, logistics, and financial parameters.",
+      icon: <Settings className="w-6 h-6" />,
+      title: "System Components",
+      description: "Integrated waste processing, hydrogen production, and fuel cell technology in containerized modular units.",
     },
     {
-      icon: <Network className="w-6 h-6" />,
-      title: "Vendor Module",
-      description: "Profile management, marketplace feed access, and comprehensive bid management capabilities.",
+      icon: <Clock className="w-6 h-6" />,
+      title: "Continuous Operation",
+      description: "Low-noise operation below 45 decibels with 24/7 monitoring and predictive maintenance capabilities.",
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Admin Dashboard",
-      description: "User management, platform analytics, vendor governance, and system monitoring tools.",
+      title: "Performance Analytics",
+      description: "Real-time energy generation tracking, efficiency metrics, and ROI monitoring dashboards.",
     },
     {
-      icon: <Cpu className="w-6 h-6" />,
-      title: "Analytics Engine",
-      description: "Deep insights, market trends, and data-driven decision support for optimal trading outcomes.",
+      icon: <BadgeCheck className="w-6 h-6" />,
+      title: "Deployment Support",
+      description: "End-to-end installation, commissioning, training, and long-term technical support for all systems.",
     },
   ];
 
   const processSteps = [
-    { step: "01", title: "Register", desc: "Create your account as buyer or vendor" },
-    { step: "02", title: "Post/Browse", desc: "List requirements or explore opportunities" },
-    { step: "03", title: "AI Match", desc: "Get intelligent recommendations" },
-    { step: "04", title: "Trade", desc: "Complete transactions securely" },
+    { step: "01", title: "Consultation", desc: "Assess energy needs and determine system requirements" },
+    { step: "02", title: "Design", desc: "Custom configuration based on capacity and application" },
+    { step: "03", title: "Deployment", desc: "Installation and site commissioning" },
+    { step: "04", title: "Operations", desc: "Ongoing monitoring and maintenance support" },
   ];
 
   return (
@@ -108,11 +108,11 @@ const Services = () => {
             </div>
             
             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
-              Comprehensive Energy Solutions
+              Clean Energy Solutions
             </h1>
-            
+
             <p className="text-lg text-slate-400 leading-relaxed">
-              From AI-powered trading to real-time grid management, our platform offers end-to-end solutions for modern energy businesses.
+              Scalable systems generating zero-emission electricity from geothermal energy and green hydrogen for industrial, commercial, and strategic applications.
             </p>
           </div>
         </div>
@@ -126,7 +126,7 @@ const Services = () => {
               Core Offerings
             </span>
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
-              Platform Services
+              Our Products
             </h2>
           </div>
 
@@ -165,13 +165,13 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <span className="text-emerald-600 font-semibold text-xs uppercase tracking-widest mb-3 block">
-              Platform Architecture
+              System Features
             </span>
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-4">
-              Integrated Modules
+              Key Capabilities
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Our platform is built with specialized modules catering to every stakeholder in the energy trading ecosystem.
+              Each Renergizr system is designed with integrated features ensuring reliable operation, monitoring, and maintenance support.
             </p>
           </div>
 
