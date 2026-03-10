@@ -1,72 +1,92 @@
 import { Link } from "react-router-dom";
-import { 
-  Newspaper, 
-  Linkedin, 
+import {
+  Newspaper,
+  Linkedin,
   Calendar,
   ArrowRight,
   ExternalLink,
   FileText,
   Video,
   Image as ImageIcon,
-  Zap
+  Zap,
+  Heart,
+  MessageCircle,
+  Share2
 } from "lucide-react";
 import { Button } from "../components/ui/button";
 
 const Media = () => {
   const blogPosts = [
     {
-      title: "The Future of B2B Energy Trading in India",
-      excerpt: "Exploring how AI and technology are reshaping the energy trading landscape in India's growing market.",
+      title: "Geothermal Energy: The Future of Baseload Renewable Power",
+      excerpt: "Understanding how geothermal technology provides continuous, reliable clean electricity without weather dependencies.",
       date: "January 15, 2026",
-      category: "Industry Insights",
+      category: "Technology",
       image: "https://images.unsplash.com/photo-1686475577092-285cd688e55a?crop=entropy&cs=srgb&fm=jpg&q=85&w=400",
     },
     {
-      title: "Understanding RFQ/Tendering in Energy Procurement",
-      excerpt: "A comprehensive guide to Request for Quote and tendering processes for energy buyers and vendors.",
+      title: "Green Hydrogen Production: From Wastewater to Clean Energy",
+      excerpt: "Exploring advanced electrolysis technology that produces 99.8% pure hydrogen from industrial wastewater.",
       date: "January 10, 2026",
-      category: "Guides",
+      category: "Innovation",
       image: "https://images.unsplash.com/photo-1768839722571-c45c96186dee?crop=entropy&cs=srgb&fm=jpg&q=85&w=400",
     },
     {
-      title: "Green Energy Certifications: What You Need to Know",
-      excerpt: "Breaking down the various green energy certifications and their importance in the B2B market.",
+      title: "Zero-Emission Power Systems: Industrial Applications",
+      excerpt: "How clean energy genset systems are transforming power generation across manufacturing, ports, and defense sectors.",
       date: "January 5, 2026",
-      category: "Sustainability",
+      category: "Industry",
       image: "https://images.unsplash.com/photo-1639422026989-c17351e8c71e?crop=entropy&cs=srgb&fm=jpg&q=85&w=400",
     },
   ];
 
   const pressReleases = [
     {
-      title: "Renergizr Industries Announces B2B Energy Trading Platform Launch",
+      title: "20 kW Geothermal Pilot Successfully Deployed in Telangana",
       date: "January 2026",
     },
     {
-      title: "Strategic Partnership for AI-Powered Energy Solutions",
+      title: "Patented Geothermal Electricity Generation Process Secured",
       date: "December 2025",
     },
     {
-      title: "Renergizr Industries Private Limited Incorporation",
+      title: "Renergizr Industries Incorporation and Initial Prototype Success",
       date: "2024",
     },
   ];
 
   const linkedinPosts = [
     {
-      content: "Excited to announce the launch of our AI-powered bid ranking system! This will revolutionize how energy trading decisions are made in India. #EnergyTrading #AI #Innovation",
-      likes: 125,
-      date: "2 days ago",
+      id: "post-001",
+      content: "Excited to share that our 20 kW geothermal pilot in Telangana has successfully validated our zero-emission electricity generation technology. This milestone brings us closer to scaling clean power solutions across India. #GeothermalEnergy #CleanTech #India",
+      engagement: { likes: 342, comments: 28, shares: 15 },
+      date: "3 days ago",
+      linkedinUrl: "https://linkedin.com/company/renergizr-industries",
+      author: "Himanshu Gupta"
     },
     {
-      content: "The future of energy is sustainable. At Renergizr, we're committed to promoting green energy certifications and carbon credit verification. #Sustainability #GreenEnergy",
-      likes: 98,
+      id: "post-002",
+      content: "Our patented geothermal electricity generation process represents 12+ years of research and innovation. By harnessing Earth's natural heat, we're enabling reliable, baseload renewable power for industries worldwide. Zero emissions. Maximum efficiency. #Innovation #Sustainability",
+      engagement: { likes: 287, comments: 22, shares: 12 },
       date: "1 week ago",
+      linkedinUrl: "https://linkedin.com/company/renergizr-industries",
+      author: "Himanshu Gupta"
     },
     {
-      content: "Our B2B marketplace is designed to bring transparency and efficiency to energy trading. Connect with verified vendors and make smarter procurement decisions. #B2B #EnergyMarket",
-      likes: 87,
+      id: "post-003",
+      content: "80% reduction in operational costs compared to diesel generators. That's what our clean energy genset system delivers. Plus zero carbon emissions, low noise operation, and modular scalability from 5 kW to 1 MW+. The future of power generation is here. #CleanEnergy #Industry4.0",
+      engagement: { likes: 412, comments: 35, shares: 18 },
       date: "2 weeks ago",
+      linkedinUrl: "https://linkedin.com/company/renergizr-industries",
+      author: "Himanshu Gupta"
+    },
+    {
+      id: "post-004",
+      content: "Thank you Ministry of New and Renewable Energy for supporting indigenous clean energy innovation. With validation from government and industry partners, Renergizr is accelerating the transition to sustainable power solutions across India. #EnergyIndependence #DeepTech",
+      engagement: { likes: 156, comments: 18, shares: 9 },
+      date: "3 weeks ago",
+      linkedinUrl: "https://linkedin.com/company/renergizr-industries",
+      author: "Himanshu Gupta"
     },
   ];
 
@@ -162,26 +182,40 @@ const Media = () => {
               </div>
 
               <div className="space-y-6">
-                {linkedinPosts.map((post, index) => (
+                {linkedinPosts.map((post) => (
                   <div
-                    key={index}
-                    data-testid={`linkedin-post-${index}`}
-                    className="bg-white border border-slate-200 rounded-sm p-6"
+                    key={post.id}
+                    data-testid={`linkedin-post-${post.id}`}
+                    className="bg-white border border-slate-200 rounded-sm p-6 hover:shadow-md transition-shadow"
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded bg-emerald-500 flex items-center justify-center shrink-0">
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full bg-[#0077B5] flex items-center justify-center shrink-0">
                         <Zap className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
+                        <div className="flex flex-col gap-1">
                           <span className="font-bold text-slate-900">Renergizr Industries</span>
-                          <span className="text-slate-400 text-sm">• {post.date}</span>
-                        </div>
-                        <p className="text-slate-700 text-sm leading-relaxed">{post.content}</p>
-                        <div className="mt-4 flex items-center gap-4 text-slate-500 text-sm">
-                          <span>{post.likes} likes</span>
+                          <span className="text-slate-500 text-xs">Himanshu Gupta, Founder</span>
                         </div>
                       </div>
+                      <span className="text-slate-400 text-xs shrink-0">{post.date}</span>
+                    </div>
+
+                    <p className="text-slate-700 text-sm leading-relaxed mb-4">{post.content}</p>
+
+                    <div className="border-t border-slate-100 pt-4 flex items-center gap-6 text-slate-600 text-sm">
+                      <button className="flex items-center gap-2 hover:text-[#0077B5] transition-colors">
+                        <Heart className="w-4 h-4" />
+                        <span>{post.engagement.likes}</span>
+                      </button>
+                      <button className="flex items-center gap-2 hover:text-[#0077B5] transition-colors">
+                        <MessageCircle className="w-4 h-4" />
+                        <span>{post.engagement.comments}</span>
+                      </button>
+                      <button className="flex items-center gap-2 hover:text-[#0077B5] transition-colors">
+                        <Share2 className="w-4 h-4" />
+                        <span>{post.engagement.shares}</span>
+                      </button>
                     </div>
                   </div>
                 ))}
