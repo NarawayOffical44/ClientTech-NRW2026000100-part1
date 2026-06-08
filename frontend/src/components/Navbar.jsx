@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Zap, ChevronDown } from "lucide-react";
+import { Menu, X, Zap } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Products & Services", path: "/services" },
+    { name: "Technology & Solutions", path: "/services" },
     { name: "Team", path: "/team" },
     { name: "Media", path: "/media" },
     { name: "Contact", path: "/contact" },

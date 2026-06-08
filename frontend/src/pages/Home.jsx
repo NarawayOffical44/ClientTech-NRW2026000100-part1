@@ -15,17 +15,16 @@ import {
   FileText,
   Store,
   LayoutDashboard,
-  Battery,
 } from "lucide-react";
 import { Button } from "../components/ui/button";
 import NewsTicker from "../components/NewsTicker";
 
 const Home = () => {
   const stats = [
-    { value: "Zero", label: "Carbon Emissions", icon: <Zap className="w-5 h-5" /> },
-    { value: "80%", label: "Lower Operating Costs", icon: <TrendingUp className="w-5 h-5" /> },
-    { value: "20 kW", label: "Pilot Deployment", icon: <BarChart3 className="w-5 h-5" /> },
-    { value: "Patented", label: "Geothermal Tech", icon: <Globe className="w-5 h-5" /> },
+    { value: "1", label: "Granted Patent", icon: <Users className="w-5 h-5" /> },
+    { value: "80%", label: "Lower OPEX vs Diesel", icon: <TrendingUp className="w-5 h-5" /> },
+    { value: "20kW", label: "Pilot Demonstrated", icon: <BarChart3 className="w-5 h-5" /> },
+    { value: "1MW", label: "Modular Scale Target", icon: <Globe className="w-5 h-5" /> },
   ];
 
   return (
@@ -55,7 +54,7 @@ const Home = () => {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-sm bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wide mb-6">
                 <Zap className="w-3.5 h-3.5" />
-                Indigenous Clean Energy Technology
+                Clean Energy Genset Technology
               </div>
 
               <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-5">
@@ -64,7 +63,7 @@ const Home = () => {
               </h1>
 
               <p className="text-base lg:text-lg text-slate-400 leading-relaxed mb-8 max-w-lg">
-                Zero-emission electricity from geothermal energy and green hydrogen. Renergizr Industries powers the future with patented clean energy systems replacing diesel generators across industries, ports, and defense infrastructure.
+                Renergizr Industries develops patented clean energy genset systems that generate zero-emission electricity using wastewater, green hydrogen, and geothermal renewable energy.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -73,7 +72,7 @@ const Home = () => {
                     data-testid="hero-cta-primary"
                     className="rounded-sm px-8 py-5 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold uppercase tracking-wide text-sm"
                   >
-                    Explore Technology
+                    Explore Solutions
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
@@ -83,7 +82,7 @@ const Home = () => {
                     variant="outline"
                     className="rounded-sm px-8 py-5 bg-transparent border-2 border-slate-600 text-white hover:bg-slate-800 font-semibold uppercase tracking-wide text-sm"
                   >
-                    Learn More
+                    About Us
                   </Button>
                 </Link>
               </div>
@@ -93,7 +92,7 @@ const Home = () => {
             <div className="hidden lg:block">
               <div className="bg-white/5 border border-white/10 rounded-sm p-8">
                 <p className="text-slate-400 text-xs font-semibold uppercase tracking-widest mb-6">
-                  Technology Highlights
+                  Technology at a Glance
                 </p>
                 <div className="grid grid-cols-2 gap-5">
                   {stats.map((stat, i) => (
@@ -124,15 +123,15 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ── CORE TECHNOLOGY ────────────────────────────────────────── */}
+      {/* ── PLATFORM MODULES ────────────────────────────────────────── */}
       <section data-testid="modules-section" className="py-20 lg:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="mb-14">
             <span className="text-emerald-600 font-semibold text-xs uppercase tracking-widest mb-3 block">
-              Technology Stack
+              Customer Segments
             </span>
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight max-w-xl">
-              Clean Energy Solutions
+              Built for Critical Power Users
             </h2>
           </div>
 
@@ -142,11 +141,11 @@ const Home = () => {
               className="bg-white border border-slate-200 border-t-4 border-t-amber-500 rounded-sm p-7 card-lift"
             >
               <div className="w-12 h-12 rounded-sm bg-amber-50 flex items-center justify-center text-amber-600 mb-5">
-                <Zap className="w-6 h-6" />
+                <FileText className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-3">Green Hydrogen</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">Industrial Sector</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Advanced electrolysis technology producing 99.8% pure hydrogen from wastewater, creating a clean energy carrier for electricity generation.
+                Clean backup and off-grid power for manufacturing plants, chemical plants, mining operations, and oil and gas refineries.
               </p>
             </div>
 
@@ -155,11 +154,11 @@ const Home = () => {
               className="bg-white border border-slate-200 border-t-4 border-t-emerald-500 rounded-sm p-7 card-lift"
             >
               <div className="w-12 h-12 rounded-sm bg-emerald-50 flex items-center justify-center text-emerald-600 mb-5">
-                <Globe className="w-6 h-6" />
+                <Store className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-3">Geothermal Energy</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">Commercial Sector</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Patented geothermal electricity generation technology delivering continuous baseload renewable power with 100+ year operational life.
+                Low-noise clean power for hospitals, hotels, data centres, telecom facilities, banking operations, and IT service campuses.
               </p>
             </div>
 
@@ -168,11 +167,11 @@ const Home = () => {
               className="bg-white border border-slate-200 border-t-4 border-t-slate-700 rounded-sm p-7 card-lift"
             >
               <div className="w-12 h-12 rounded-sm bg-slate-100 flex items-center justify-center text-slate-700 mb-5">
-                <Battery className="w-6 h-6" />
+                <LayoutDashboard className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-3">Fuel Cell Power</h3>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">Defense & Marine</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                High-efficiency fuel cell stacks converting hydrogen to zero-emission electricity with modular scalability from 5 kW to 1 MW+.
+                Silent, reliable systems for defense camps, remote installations, ports, shore-to-ship power, and cold-chain logistics hubs.
               </p>
             </div>
           </div>
@@ -184,10 +183,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-14">
             <span className="text-emerald-600 font-semibold text-xs uppercase tracking-widest mb-3 block">
-              Key Advantages
+              Our Solutions
             </span>
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
-              Why Choose Renergizr
+              Clean Power Systems for Diesel Replacement
             </h2>
           </div>
 
@@ -195,23 +194,23 @@ const Home = () => {
             {[
               {
                 icon: <Zap className="w-6 h-6" />,
-                title: "Zero Emissions",
-                desc: "Complete elimination of carbon emissions, enabling industries to meet ESG goals and sustainability targets.",
+                title: "Clean Energy Gensets",
+                desc: "Modular 5kW to 1MW genset systems designed to replace diesel backup power with zero-emission electricity.",
               },
               {
-                icon: <TrendingUp className="w-6 h-6" />,
-                title: "Lower Costs",
-                desc: "80% reduction in operational costs compared to diesel generators with minimal maintenance requirements.",
+                icon: <Brain className="w-6 h-6" />,
+                title: "Wastewater-to-Hydrogen",
+                desc: "Integrated electrolyzer and fuel cell stack uses industrial wastewater to generate high-purity green hydrogen.",
               },
               {
                 icon: <ShieldCheck className="w-6 h-6" />,
-                title: "Patented Tech",
-                desc: "Government-registered patented process for indigenous clean energy generation providing competitive advantage.",
+                title: "Geothermal Clean Power",
+                desc: "Regulatory documents, green energy certifications, and carbon credit balances — all rigorously verified.",
               },
               {
-                icon: <Globe className="w-6 h-6" />,
-                title: "Modular Scalability",
-                desc: "Flexible deployment from 5 kW to 1 MW+ with containerized systems for any application.",
+                icon: <Radio className="w-6 h-6" />,
+                title: "AI Remote Monitoring",
+                desc: "Predictive maintenance, performance analytics, and smart energy controls for connected clean-power assets.",
               },
             ].map((service, i) => (
               <div
@@ -235,7 +234,7 @@ const Home = () => {
                 variant="outline"
                 className="rounded-sm px-8 py-5 border-2 border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white font-semibold uppercase tracking-wide text-sm"
               >
-                View All Services
+                View All Solutions
                 <ArrowUpRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
@@ -252,17 +251,17 @@ const Home = () => {
                 About Renergizr
               </span>
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-5">
-                Decarbonizing Energy with Innovation
+                Replacing Diesel Gensets with Clean Power
               </h2>
               <p className="text-slate-600 leading-relaxed mb-8">
-                Renergizr Industries develops indigenous clean energy technologies for zero-emission electricity generation. Our patented systems leverage geothermal energy, wastewater processing, and green hydrogen fuel cells to deliver sustainable power for industries, ports, and defense infrastructure across India.
+                Renergizr Industries Private Limited is a deep-tech clean energy startup focused on commercializing patented genset systems for industrial, commercial, defense, and marine infrastructure applications.
               </p>
               <ul className="space-y-3 mb-8">
                 {[
-                  "Patented geothermal electricity generation",
-                  "99.8% pure hydrogen from wastewater",
-                  "80% lower operational costs vs diesel",
-                  "Modular systems from 5 kW to 1 MW+",
+                  "Zero carbon emissions and ultra-low noise below 45 dB",
+                  "80% lower operational cost compared with diesel gensets",
+                  "5kW prototype and 20kW field demonstration completed",
+                  "Patent No. 202011006850 / 548040 granted",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
@@ -296,7 +295,7 @@ const Home = () => {
                   </div>
                   <div>
                     <div className="font-bold text-slate-900 text-xl leading-none">16+</div>
-                    <div className="text-slate-500 text-xs mt-1">Years of Industry Experience</div>
+                    <div className="text-slate-500 text-xs mt-1">Years of Industrial Experience</div>
                   </div>
                 </div>
               </div>
@@ -331,13 +330,13 @@ const Home = () => {
                 From the Founder
               </span>
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-6">
-                Building the Future of Clean Energy
+                Why We Built Renergizr
               </h2>
               <blockquote className="border-l-4 border-emerald-500 pl-6 italic text-slate-600 text-lg leading-relaxed mb-6">
-                "India's energy independence depends on sustainable, indigenous technologies. We built Renergizr to provide zero-emission power solutions that replace polluting diesel generators. With our patented geothermal and green hydrogen systems, we're creating a cleaner, more resilient energy future."
+                "Diesel generators remain one of the most polluting and expensive ways to keep critical infrastructure running. We built Renergizr to replace them with clean, silent, indigenous technology that turns wastewater and green hydrogen into reliable electricity."
               </blockquote>
               <p className="text-slate-500 text-sm">
-                Himanshu Gupta is an entrepreneur with 12+ years in industrial technology and clean energy. He founded Renergizr Industries with technical mentorship from Dr. Bhupesh Sharma, a renowned materials scientist with 35+ years of research experience.
+                Himanshu Gupta leads Renergizr Industries with a focus on commercializing patented clean power systems for India and global off-grid energy markets.
               </p>
             </div>
           </div>
@@ -348,10 +347,10 @@ const Home = () => {
       <section data-testid="cta-section" className="py-20 lg:py-24 bg-slate-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white tracking-tight mb-5">
-            Power Your Future with Clean Energy
+            Ready to Replace Diesel Backup Power?
           </h2>
           <p className="text-slate-400 text-lg mb-10 max-w-2xl mx-auto">
-            Partner with Renergizr Industries to deploy zero-emission power systems for your industrial, commercial, or strategic infrastructure needs.
+            Explore clean genset systems built for lower OPEX, zero-emission operation, and reliable power across industrial, commercial, defense, and marine use cases.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact">
@@ -359,7 +358,7 @@ const Home = () => {
                 data-testid="cta-primary"
                 className="rounded-sm px-10 py-6 bg-emerald-500 hover:bg-emerald-600 text-white font-semibold uppercase tracking-wide text-sm"
               >
-                Get in Touch
+                Get Started Today
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
@@ -369,7 +368,7 @@ const Home = () => {
                 variant="outline"
                 className="rounded-sm px-10 py-6 bg-transparent border-2 border-slate-600 text-white hover:bg-slate-800 font-semibold uppercase tracking-wide text-sm"
               >
-                Learn Technology
+                View Services
               </Button>
             </Link>
           </div>

@@ -18,50 +18,50 @@ const About = () => {
     {
       icon: <Target className="w-6 h-6" />,
       title: "Mission",
-      description: "Develop indigenous clean energy technologies that deliver zero-emission electricity using geothermal energy and green hydrogen, replacing diesel generators and enabling India's decarbonization at scale.",
+      description: "To replace diesel gensets with indigenous clean energy systems that deliver reliable, zero-emission power using wastewater, green hydrogen, and geothermal renewable energy.",
     },
     {
       icon: <Eye className="w-6 h-6" />,
       title: "Vision",
-      description: "Build a clean, resilient, and energy-secure future through localized renewable energy production. Transform how industries, ports, and defense infrastructure generate power globally.",
+      description: "To become India's clean genset champion and build a global distributed clean power platform for industrial, commercial, defense, and marine infrastructure.",
     },
     {
       icon: <Award className="w-6 h-6" />,
       title: "Values",
-      description: "Innovation, sustainability, reliability, and indigenous technology form our core values. We create measurable environmental and economic impact for all stakeholders.",
+      description: "Indigenous innovation, sustainability, reliability, and measurable impact guide our work as we commercialize clean backup and off-grid power systems.",
     },
   ];
 
   const timeline = [
-    {
-      year: "2023",
-      title: "5 kW Prototype Demonstration",
-      description: "Successfully developed and demonstrated a 5 kW prototype system in Delhi with research institutions and government partners."
+    { 
+      year: "2024", 
+      title: "Company Founded", 
+      description: "Renergizr Industries Private Limited established to commercialize clean energy technology for diesel genset replacement." 
     },
-    {
-      year: "2024",
-      title: "Patented Technology",
-      description: "Secured patent from Government of India Patent Office for geothermal electricity generation process."
+    { 
+      year: "2025", 
+      title: "Prototype & Pilot Validation", 
+      description: "5kW prototype and 20kW field demonstration completed with patented clean energy process technology." 
     },
-    {
-      year: "2024",
-      title: "20 kW Field Pilot",
-      description: "Deployed 20 kW pilot system at a geothermal site in Telangana, validating technology under real operating conditions."
+    { 
+      year: "2026", 
+      title: "Commercial Scale-Up", 
+      description: "Scale-up engagement with SCCL and Ministry of Coal, including 100kW to 3MW deployment pathway." 
     },
-    {
-      year: "2026+",
-      title: "Commercial Scaling",
-      description: "Scaling deployments to multi-megawatt systems across industrial clusters, ports, and defense infrastructure."
+    { 
+      year: "Future", 
+      title: "Nationwide Rollout", 
+      description: "Expansion across industrial, commercial, defense, marine, and critical infrastructure use cases." 
     },
   ];
 
   const highlights = [
-    "Zero carbon emissions from electricity generation",
-    "80% lower operational costs than diesel generators",
-    "Modular systems from 5 kW to 1 MW+ capacity",
-    "Patented geothermal energy technology",
-    "Advanced green hydrogen production (99.8% purity)",
-    "Low-noise operation below 45 decibels"
+    "Modular 5kW to 1MW clean energy genset systems",
+    "Wastewater-to-green-hydrogen electricity generation",
+    "Zero carbon emissions and ultra-low noise below 45 dB",
+    "80% lower OPEX compared with diesel gensets",
+    "Remote monitoring and predictive maintenance AI",
+    "Marine, port, defense, and off-grid applications"
   ];
 
   return (
@@ -76,11 +76,11 @@ const About = () => {
             </div>
             
             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
-              Decarbonizing Energy with Indigenous Innovation
+              Building India's Energy Future
             </h1>
-
+            
             <p className="text-lg text-slate-400 leading-relaxed">
-              Renergizr Industries is a deep-tech clean energy startup developing patented technologies for zero-emission electricity generation using geothermal energy and green hydrogen.
+              Renergizr Industries Private Limited is pioneering clean energy genset systems that generate zero-emission electricity using wastewater, green hydrogen, and geothermal renewable energy.
             </p>
           </div>
         </div>
@@ -95,13 +95,13 @@ const About = () => {
                 Our Story
               </span>
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-6">
-                From Research to Reality
+                From Vision to Reality
               </h2>
               <p className="text-slate-600 leading-relaxed mb-6">
-                Founded by Himanshu Gupta and technically mentored by Dr. Bhupesh Sharma, Renergizr Industries combines scientific research with advanced engineering to develop next-generation clean energy systems. Our mission is delivering reliable, affordable, and zero-emission electricity to industries, ports, and defense infrastructure.
+                Renergizr Industries was founded with a singular purpose: to replace polluting, noisy, and expensive diesel generators with clean, reliable, indigenous power systems.
               </p>
               <p className="text-slate-600 leading-relaxed mb-8">
-                Through patented geothermal technology and advanced hydrogen fuel cells, we're replacing diesel generators with sustainable solutions that reduce costs by 80% while eliminating carbon emissions. Our validated prototypes and field pilots prove we're delivering the future today.
+                Our patented technology combines wastewater-based hydrogen generation, fuel cells, geothermal clean power, and AI-based monitoring to support industrial, commercial, defense, and marine infrastructure.
               </p>
               <div className="flex items-center gap-4 p-5 rounded bg-slate-50 border-accent-left">
                 <div className="w-12 h-12 rounded bg-emerald-500 flex items-center justify-center shrink-0">
@@ -170,10 +170,10 @@ const About = () => {
                 What We Offer
               </span>
               <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-6">
-                Technology Features
+                Clean Power Capabilities
               </h2>
               <p className="text-slate-600 leading-relaxed mb-8">
-                Our clean energy systems combine advanced electrolysis, geothermal extraction, and fuel cell technology to deliver reliable, scalable power for multiple applications.
+                Our technology provides clean backup and off-grid power with lower lifecycle cost, lower emissions, and reliable operation for critical energy users.
               </p>
               <div className="grid sm:grid-cols-2 gap-4">
                 {highlights.map((item, index) => (
@@ -185,13 +185,13 @@ const About = () => {
               </div>
             </div>
             <div className="bg-slate-900 p-8 lg:p-10 rounded-sm">
-              <h3 className="text-white font-bold text-lg mb-6">Core Technology</h3>
+              <h3 className="text-white font-bold text-lg mb-6">Key Differentiators</h3>
               <div className="space-y-4">
                 {[
-                  { label: "Hydrogen Production", value: "99.8% purity from wastewater" },
-                  { label: "Geothermal Capacity", value: "100+ year operational life" },
-                  { label: "Scalability", value: "5 kW to 1 MW+ modular systems" },
-                  { label: "Cost Efficiency", value: "80% lower than diesel generators" },
+                  { label: "Patent-Protected IP", value: "Patent No. 202011006850 / 548040" },
+                  { label: "Lower OPEX", value: "80% lower than diesel gensets" },
+                  { label: "Low-Noise Operation", value: "Below 45 dB" },
+                  { label: "Scalable Systems", value: "5kW to 1MW modular design" },
                 ].map((item, index) => (
                   <div key={index} className="flex justify-between items-center border-b border-slate-700 pb-4">
                     <span className="text-slate-300 text-sm">{item.label}</span>
@@ -243,10 +243,10 @@ const About = () => {
       <section className="py-20 lg:py-24 bg-slate-900">
         <div className="max-w-4xl mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white tracking-tight mb-6">
-            Ready to Deploy Clean Energy?
+            Want to Partner With Us?
           </h2>
           <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
-            Partner with Renergizr to implement zero-emission power solutions for your industrial, commercial, or defense operations.
+            Join the clean power transition. Discover how Renergizr can help replace diesel backup power with patented zero-emission systems.
           </p>
           <Link to="/contact">
             <Button

@@ -44,13 +44,13 @@ const Contact = () => {
     {
       icon: <Phone className="w-5 h-5" />,
       title: "Phone",
-      value: "+91-9315940284",
+      value: "+91-8970537156",
       subtext: "Himanshu Gupta",
     },
     {
       icon: <Mail className="w-5 h-5" />,
       title: "Email",
-      value: "contact@renergizr.com",
+      value: "renergizr.industries@gmail.com",
       subtext: "We'll respond within 24 hours",
     },
     {
@@ -69,20 +69,20 @@ const Contact = () => {
 
   const faqs = [
     {
-      q: "How do Renergizr systems generate electricity without emissions?",
-      a: "Our systems use advanced electrochemistry to produce hydrogen from wastewater through electrolysis, then convert hydrogen into electricity via fuel cells. Geothermal systems tap into Earth's heat for continuous renewable power generation."
+      q: "What is Renergizr's Clean Energy Genset System?",
+      a: "It is a patented clean power system that generates zero-emission electricity using wastewater, green hydrogen, fuel cells, and geothermal renewable energy."
     },
     {
-      q: "What is the typical cost saving compared to diesel generators?",
-      a: "Renergizr systems achieve approximately 80% lower operational costs than diesel generators over their operational lifetime. This includes fuel, maintenance, and environmental compliance costs."
+      q: "What makes it different from diesel gensets?",
+      a: "The system is designed for zero carbon emissions, ultra-low noise below 45 dB, 80% lower OPEX, and modular scaling from 5kW to 1MW."
     },
     {
-      q: "Can these systems be deployed for industrial applications?",
-      a: "Yes, our modular systems range from 5 kW to 1 MW+ capacity, suitable for manufacturing plants, refineries, data centers, hospitals, telecom towers, ports, and defense installations."
+      q: "Is the platform suitable for small businesses?",
+      a: "Yes. The modular design supports kW-scale pilots and can scale toward MW-level systems for industrial, commercial, defense, and marine users."
     },
     {
-      q: "What support do you provide after installation?",
-      a: "We provide end-to-end support including commissioning, operator training, AI-enabled remote monitoring, predictive maintenance alerts, and 24/7 technical assistance."
+      q: "What validation has been completed?",
+      a: "Renergizr has completed a 5kW prototype, a 20kW field demonstration, and has a granted patent along with government and PSU-backed scale-up engagements."
     },
   ];
 
@@ -102,7 +102,7 @@ const Contact = () => {
             </h1>
             
             <p className="text-lg text-slate-400 leading-relaxed">
-              Have questions about our platform? Ready to transform your energy trading? We're here to help.
+              Have questions about our clean genset systems, pilots, or deployment models? We're here to help.
             </p>
           </div>
         </div>
@@ -121,7 +121,7 @@ const Contact = () => {
                 Get in Touch
               </h2>
               <p className="text-slate-600 leading-relaxed mb-10">
-                Whether you're interested in our B2B energy trading platform, have technical questions, or want to explore partnership opportunities, our team is ready to assist.
+                Whether you're interested in clean genset deployment, wastewater-to-hydrogen systems, geothermal clean power, or partnership opportunities, our team is ready to assist.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-6">
@@ -258,7 +258,7 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
-                        placeholder="Tell us about your energy trading needs..."
+                        placeholder="Tell us about your clean power requirements..."
                         rows={5}
                         className="rounded-sm border-slate-300 focus:border-emerald-500 resize-none"
                       />

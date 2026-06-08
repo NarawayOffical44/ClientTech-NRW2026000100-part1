@@ -21,79 +21,79 @@ import { Button } from "../components/ui/button";
 const Services = () => {
   const mainServices = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Clean Energy Genset System",
-      description: "Zero-emission electricity generation using green hydrogen fuel cells and wastewater-based electrolysis technology.",
+      icon: <FileText className="w-8 h-8" />,
+      title: "Clean Energy Gensets",
+      description: "Modular clean genset systems that replace diesel backup power with zero-emission electricity for critical facilities.",
       features: [
-        "99.8% pure hydrogen production",
-        "High-efficiency fuel cell stacks",
-        "Modular 5 kW to 1 MW+ capacity",
-        "AI-enabled remote monitoring"
+        "5kW to 1MW modular capacity",
+        "Stable 415V/50Hz clean output",
+        "Ultra-low noise below 45 dB",
+        "Zero carbon emissions"
+      ],
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "Wastewater-to-Hydrogen",
+      description: "Integrated electrolyzer and fuel cell systems use industrial wastewater to generate high-purity green hydrogen.",
+      features: [
+        "Industrial wastewater input",
+        "99.8% pure hydrogen output",
+        "PEM and alkaline electrolyzer stack",
+        "Reduced freshwater demand"
+      ],
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Geothermal Clean Power",
+      description: "Indigenous patented process technology for round-the-clock clean electricity using geothermal renewable energy.",
+      features: [
+        "Patent No. 202011006850 / 548040",
+        "All-weather baseload operation",
+        "Low operational cost",
+        "High capacity factor"
       ],
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Geothermal Power Systems",
-      description: "Patented indigenous geothermal electricity generation for continuous renewable baseload power with 100+ year lifespan.",
+      title: "AI Remote Monitoring",
+      description: "Connected system monitoring, predictive maintenance, and performance analytics for deployed clean power assets.",
       features: [
-        "Patented geothermal process",
-        "Continuous baseload generation",
-        "Waste heat utilization",
-        "Ultra-reliable power delivery"
-      ],
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Cost Optimization",
-      description: "80% reduction in operational costs compared to diesel generators with minimal maintenance requirements.",
-      features: [
-        "Lower fuel dependency",
-        "Reduced operational expenses",
-        "Minimal maintenance needs",
-        "Predictive monitoring system"
-      ],
-    },
-    {
-      icon: <BadgeCheck className="w-8 h-8" />,
-      title: "Environmental Impact",
-      description: "Zero carbon emissions with measurable environmental benefits and ESG goal achievement.",
-      features: [
-        "600 MT CO2 offset per MW annually",
-        "Improved air quality",
-        "ESG compliance",
-        "Sustainability certifications"
+        "Predictive maintenance",
+        "Load forecasting",
+        "Performance benchmarking",
+        "ESG and carbon reporting"
       ],
     },
   ];
 
   const modules = [
     {
-      icon: <Settings className="w-6 h-6" />,
-      title: "System Components",
-      description: "Integrated waste processing, hydrogen production, and fuel cell technology in containerized modular units.",
+      icon: <Users className="w-6 h-6" />,
+      title: "Industrial Sites",
+      description: "Manufacturing, chemical, mining, and oil and gas facilities needing cleaner backup and off-grid power.",
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Continuous Operation",
-      description: "Low-noise operation below 45 decibels with 24/7 monitoring and predictive maintenance capabilities.",
+      icon: <Network className="w-6 h-6" />,
+      title: "Commercial Facilities",
+      description: "Hospitals, hotels, data centres, telecom facilities, banking operations, and IT campuses.",
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Performance Analytics",
-      description: "Real-time energy generation tracking, efficiency metrics, and ROI monitoring dashboards.",
+      title: "Defense & Remote Bases",
+      description: "Silent, reliable, off-grid power for military bases, border installations, and remote operations.",
     },
     {
-      icon: <BadgeCheck className="w-6 h-6" />,
-      title: "Deployment Support",
-      description: "End-to-end installation, commissioning, training, and long-term technical support for all systems.",
+      icon: <Cpu className="w-6 h-6" />,
+      title: "Marine & Ports",
+      description: "Shore-to-ship clean power, port offices, cold-chain logistics hubs, and harbor infrastructure.",
     },
   ];
 
   const processSteps = [
-    { step: "01", title: "Consultation", desc: "Assess energy needs and determine system requirements" },
-    { step: "02", title: "Design", desc: "Custom configuration based on capacity and application" },
-    { step: "03", title: "Deployment", desc: "Installation and site commissioning" },
-    { step: "04", title: "Operations", desc: "Ongoing monitoring and maintenance support" },
+    { step: "01", title: "Assess", desc: "Map diesel load, site profile, and clean power requirement" },
+    { step: "02", title: "Pilot", desc: "Deploy prototype or pilot system for validation" },
+    { step: "03", title: "Scale", desc: "Expand from kW pilots to MW-scale clean genset systems" },
+    { step: "04", title: "Operate", desc: "Monitor performance, maintenance, and carbon impact" },
   ];
 
   return (
@@ -104,15 +104,15 @@ const Services = () => {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wide mb-6">
               <Zap className="w-3.5 h-3.5" />
-              Products & Services
+              Technology & Solutions
             </div>
             
             <h1 className="text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
-              Clean Energy Solutions
+              Clean Energy Genset Solutions
             </h1>
-
+            
             <p className="text-lg text-slate-400 leading-relaxed">
-              Scalable systems generating zero-emission electricity from geothermal energy and green hydrogen for industrial, commercial, and strategic applications.
+              From wastewater-to-hydrogen gensets to geothermal clean power, Renergizr offers patented systems for replacing diesel backup and off-grid power.
             </p>
           </div>
         </div>
@@ -126,7 +126,7 @@ const Services = () => {
               Core Offerings
             </span>
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight">
-              Our Products
+              Core Clean Power Offerings
             </h2>
           </div>
 
@@ -165,13 +165,13 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="text-center mb-16">
             <span className="text-emerald-600 font-semibold text-xs uppercase tracking-widest mb-3 block">
-              System Features
+              Application Segments
             </span>
             <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 tracking-tight mb-4">
-              Key Capabilities
+              Where We Deploy
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto">
-              Each Renergizr system is designed with integrated features ensuring reliable operation, monitoring, and maintenance support.
+              Our systems are designed for customers with critical power needs, high diesel use, ESG mandates, and off-grid reliability requirements.
             </p>
           </div>
 
@@ -209,14 +209,14 @@ const Services = () => {
                 Built for the Future
               </h2>
               <p className="text-slate-400 leading-relaxed mb-8">
-                Our platform leverages cutting-edge technologies to deliver unparalleled performance, security, and scalability.
+                Our systems combine indigenous process technology, hydrogen generation, fuel cells, geothermal energy, and AI-based controls for reliable clean power.
               </p>
               
               <div className="space-y-5">
                 {[
-                  { icon: <Brain className="w-5 h-5" />, title: "AI & Machine Learning", desc: "Smart algorithms for bid optimization" },
-                  { icon: <Globe className="w-5 h-5" />, title: "5G/6G Architecture", desc: "Ultra-low latency communication" },
-                  { icon: <BadgeCheck className="w-5 h-5" />, title: "Regulatory Compliance", desc: "Built-in compliance frameworks" },
+                  { icon: <Brain className="w-5 h-5" />, title: "AI & Monitoring", desc: "Predictive maintenance and fleet analytics" },
+                  { icon: <Globe className="w-5 h-5" />, title: "Hydrogen Systems", desc: "Wastewater-based green hydrogen generation" },
+                  { icon: <BadgeCheck className="w-5 h-5" />, title: "Patented Process", desc: "Indigenous technology validated through pilots" },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded bg-white/10 flex items-center justify-center text-emerald-400 shrink-0">

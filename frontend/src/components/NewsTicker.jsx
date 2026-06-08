@@ -3,11 +3,11 @@ import { Zap, TrendingUp, Bell } from "lucide-react";
 
 const NewsTicker = () => {
   const newsItems = [
-    "20 kW geothermal pilot successfully deployed in Telangana",
-    "Patented geothermal electricity generation process secured",
-    "Clean Energy Genset System achieves 80% cost reduction vs diesel",
-    "Supported by Ministry of New and Renewable Energy",
-    "Zero-emission technology validated through field deployments",
+    "Renergizr develops patented clean energy genset technology",
+    "5kW prototype and 20kW field demonstration completed",
+    "Clean genset systems use wastewater and green hydrogen",
+    "SCCL and Ministry of Coal engagement supports scale-up",
+    "Marine and port shore-power applications targeted for deployment",
   ];
 
   return (

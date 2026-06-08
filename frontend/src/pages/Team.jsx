@@ -17,10 +17,10 @@ const Team = () => {
     {
       name: "Himanshu Gupta",
       role: "Founder & Director",
-      phone: "+91-9315940284",
-      email: "himanshu@renergizr.com",
+      phone: "+91-8970537156",
+      email: "renergizr.industries@gmail.com",
       linkedin: "https://linkedin.com/in/",
-      bio: "Visionary leader with extensive experience in the energy sector, driving Renergizr's mission to transform B2B energy trading in India through innovative technology solutions.",
+      bio: "Founder and CEO focused on commercializing patented clean energy genset systems for diesel replacement across industrial, commercial, defense, and marine infrastructure.",
     },
   ];
 
@@ -38,7 +38,7 @@ const Team = () => {
     {
       icon: <Zap className="w-6 h-6" />,
       title: "Innovation",
-      description: "We embrace innovation and continuously seek new ways to improve energy trading.",
+      description: "We embrace innovation and continuously seek cleaner ways to generate reliable backup and off-grid power.",
     },
   ];
 
@@ -58,7 +58,7 @@ const Team = () => {
             </h1>
             
             <p className="text-lg text-slate-400 leading-relaxed">
-              Our leadership team brings together diverse expertise in energy, technology, and business to drive India's energy transformation.
+              Our leadership and advisors bring together clean energy, industrial R&D, hydrogen, fuel cell, smart grid, and startup ecosystem expertise.
             </p>
           </div>
         </div>
@@ -141,7 +141,7 @@ const Team = () => {
                 What Drives Us Forward
               </h2>
               <p className="text-slate-600 leading-relaxed mb-8">
-                At Renergizr, we foster a culture of innovation, collaboration, and excellence. Our team is united by a shared vision of transforming India's energy landscape.
+                At Renergizr, we foster a culture of innovation, collaboration, and excellence. Our team is united by a shared vision of replacing diesel gensets with clean, indigenous power systems.
               </p>
               
               <div className="space-y-6">

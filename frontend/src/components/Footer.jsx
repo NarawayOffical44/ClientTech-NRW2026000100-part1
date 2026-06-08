@@ -7,18 +7,18 @@ const Footer = () => {
   const quickLinks = [
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
-    { name: "Products & Services", path: "/services" },
+    { name: "Technology & Solutions", path: "/services" },
     { name: "Team", path: "/team" },
     { name: "Media", path: "/media" },
     { name: "Contact", path: "/contact" },
   ];
 
   const services = [
-    "B2B Energy Trading",
-    "AI-Powered Bid Ranking",
-    "RFQ & Tendering",
-    "Vendor Verification",
-    "Grid Balancing",
+    "Clean Energy Gensets",
+    "Wastewater-to-Hydrogen Systems",
+    "Geothermal Clean Power",
+    "Marine & Port Shore Power",
+    "AI-Based Remote Monitoring",
   ];
 
   return (
@@ -42,7 +42,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed mb-6">
-              India's emerging B2B marketplace for energy trading. Empowering businesses with AI-driven solutions and sustainable energy practices.
+              Deep-tech clean energy startup developing patented genset systems that generate zero-emission electricity using wastewater, green hydrogen, and geothermal energy.
             </p>
             <div className="flex gap-3">
               <a
@@ -102,13 +102,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
                 <div>
-                  <div className="text-white text-sm font-medium">+91-9315940284</div>
+                  <div className="text-white text-sm font-medium">+91-8970537156</div>
                   <div className="text-slate-500 text-xs">Himanshu Gupta</div>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
-                <span className="text-slate-400 text-sm">contact@renergizr.com</span>
+                <span className="text-slate-400 text-sm">renergizr.industries@gmail.com</span>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-emerald-500 mt-0.5 shrink-0" />
