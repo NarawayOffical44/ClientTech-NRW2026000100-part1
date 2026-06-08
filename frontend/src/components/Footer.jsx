@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Zap, Mail, Phone, MapPin, Linkedin, Twitter, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, ExternalLink } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -29,8 +29,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded bg-emerald-500 flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 flex items-center justify-center">
+                <img src="/renergizr-logo.png" alt="Renergizr logo" className="w-10 h-10 object-contain" />
               </div>
               <div className="flex flex-col">
                 <span className="font-bold text-xl tracking-tight leading-none text-white">

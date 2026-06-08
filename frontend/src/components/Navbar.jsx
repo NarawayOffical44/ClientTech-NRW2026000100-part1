@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
@@ -40,8 +40,8 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" data-testid="logo-link" className="flex items-center gap-2">
-            <div className={`w-9 h-9 rounded flex items-center justify-center ${isScrolled ? 'bg-emerald-500' : 'bg-emerald-500'}`}>
-              <Zap className="w-5 h-5 text-white" />
+            <div className="w-9 h-9 flex items-center justify-center">
+              <img src="/renergizr-logo.png" alt="Renergizr logo" className="w-9 h-9 object-contain" />
             </div>
             <div className="flex flex-col">
               <span className={`font-bold text-lg tracking-tight leading-none ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
